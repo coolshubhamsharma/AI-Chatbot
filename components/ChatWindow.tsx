@@ -40,7 +40,7 @@ export default function ChatWindow() {
   // ---------  Socket Listeners  ----------
   useEffect(() => {
     socket.on("connect", () => {
-      console.log("🟢 Socket connected:", socket.id)
+      console.log("Socket connected:", socket.id)
     })
 
     socket.on("ai-token", (token: string) => {
@@ -107,7 +107,7 @@ export default function ChatWindow() {
     setIsStreaming(true)
     setShowTyping(true)
 
-    console.log("📤 Emitting user-message:", text)
+    console.log("Emitting user-message:", text)
     socket.emit("user-message", text)
   }
 
@@ -132,14 +132,14 @@ export default function ChatWindow() {
         <div className="flex gap-3">
           <button
             onClick={() => setDarkMode(d => !d)}
-            className="text-sm"
+            className="text-sm hover:cursor-pointer"
           >
             {darkMode ? "🌞 Light" : "🌙 Dark"}
           </button>
 
           <button
             onClick={clearChat}
-            className="text-sm text-red-500 hover:underline"
+            className="text-sm text-red-500 hover:underline hover:cursor-pointer"
           >
             Clear
           </button>
