@@ -1,6 +1,8 @@
 
 # AI Chatbot – Real-Time Streaming Chat Application
 
+Link:- <a href="https://ai-chatbot-opal-one-58.vercel.app/">AI-Chatbot</a>
+
 ## Project Description
 This project is a real-time AI chatbot built using Next.js and Socket.IO.  
 It allows users to send messages and receive AI-generated responses that stream token-by-token, similar to modern AI chat interfaces.  
