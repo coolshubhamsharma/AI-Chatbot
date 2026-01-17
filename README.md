@@ -1,36 +1,126 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# AI Chatbot – Real-Time Streaming Chat Application
 
-First, run the development server:
+## Project Description
+This project is a real-time AI chatbot built using Next.js and Socket.IO.  
+It allows users to send messages and receive AI-generated responses that stream token-by-token, similar to modern AI chat interfaces.  
+The focus of this assignment was correctness, clean architecture, and user experience.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+<img src="./public/chatbot.png"/>
+
+
+## Setup Instructions (Step-by-Step)
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/coolshubhamsharma/AI-Chatbot.git
+   cd AI-Chatbot
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Create environment file**
+   Create a `.env.local` file in the root directory.
+
+4. **Add required environment variables** (see below)
+
+5. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+6. Open browser and visit:
+   ```
+   http://localhost:3000
+   ```
+
+---
+
+## Environment Variables
+
+Create a `.env` file with the following:
+
+```env
+GROQ_API_KEY=your_groq_api_key_here
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> The API key is required to communicate with the Groq LLM service.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Commands to Run the Project
 
-## Learn More
+| Command | Description |
+|------|------------|
+| `npm install` | Install dependencies |
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run start` | Run production build |
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tech Stack & Libraries Used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Frontend
+- **Next.js (App Router)**
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **Framer Motion** (UI animations)
+- **react-markdown** (Markdown rendering)
 
-## Deploy on Vercel
+### Backend / Realtime
+- **Socket.IO**
+- **Next.js API Routes**
+- **Groq SDK** (LLM streaming)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Utilities
+- **LocalStorage** (message persistence)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Features Implemented
+
+- Real-time AI response streaming
+- WebSocket-based communication (Socket.IO)
+- Message persistence using localStorage
+- Clear chat functionality
+- Copy message to clipboard with visual feedback
+- Markdown rendering for AI responses
+- Typing indicator animation
+- Auto-scroll to latest message
+- Dark / Light theme toggle
+- Responsive and clean UI
+
+---
+
+## Time Spent on Assignment
+
+**Approx. 8-10 hours**, including:
+- Architecture setup
+- Debugging streaming edge cases
+- Socket.IO lifecycle handling
+- UI/UX polish
+- Bonus feature implementation
+
+---
+
+## Demo Video
+
+ **Demo Video Link:**  
+```
+<add-your-demo-video-link-here>
+```
+
+---
+
+## Notes
+
+- Streaming is handled carefully to avoid truncation issues.
+- Token buffering is used to ensure complete AI responses.
+- Code is kept simple, readable, and well-commented.
+
+
