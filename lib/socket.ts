@@ -1,5 +1,5 @@
 import { io } from "socket.io-client"
 
-export const socket = io("https://ai-chatbot-opal-one-58.vercel.app", {
+export const socket = io("http://localhost:3000", {
   path: "/api/socket",
 })

@@ -1,7 +1,7 @@
 
 # AI Chatbot – Real-Time Streaming Chat Application
 
-Link:- <a href="https://ai-chatbot-opal-one-58.vercel.app/">AI-Chatbot</a>
+
 
 ## Project Description
 This project is a real-time AI chatbot built using Next.js and Socket.IO.  
@@ -114,7 +114,7 @@ GROQ_API_KEY=your_groq_api_key_here
 
  **Demo Video Link:**  
 ```
-comming soon
+https://drive.google.com/file/d/1ivv3RVh8h04I_dZGnSEG3BxOUzjguMo9/view?usp=sharing
 ```
 
 ---
